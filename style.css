@@ -1,0 +1,57 @@
+#outer-box {
+    margin: 0 auto;
+    padding: 170px 30px 30px 30px;
+    width: 500px;
+  }
+  
+  #inner-box {
+    padding: 100px 20px 20px 20px;
+    border-radius: 10px;
+  }
+  
+  .card-body {
+    z-index: 10;
+  }
+  
+  .img-fluid {
+    box-shadow: -2px -1px 24px 0px rgba(0,0,0,0.75);
+    border-radius: 15px;
+  }
+  
+  .card-title {
+    position: absolute;
+    top: -120px;
+    left: 45px;
+  }
+  
+  #card-num {
+    position: relative;
+    bottom: 175px;
+    left: 100px;
+    padding: 10px;
+    width: 230px;
+    height: 50px;
+  }
+  
+  #name {
+    position: relative;
+    bottom: 80px;
+    left: -200px;
+    padding: 10px;
+  }
+  
+  #expiry {
+    position: relative;
+    bottom: 165px;
+    left: 180px;
+    padding: 10px;
+  }
+  
+  #card-cvv {
+    position: relative;
+    bottom: 150px;
+    left: 275px;
+    padding: 12px;
+    width: 70px;
+    height: 50px;
+  }

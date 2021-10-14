@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Credit Card Details</title>
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="my-3 ui">
+        <div id="outer-box" class="rounded">
+            <div id="inner-box" class="card w-100">
+                <div class="card-title p-0 m-0">
+                    <img class="img-fluid" style="height: 220px; width: 350px;" src="front.png">
+
+                    <h5 id="card-num" class="text-light border rounded">
+                        <span class="number-ui"></span>
+                    </h5>
+
+                    <p id="name" class="text-info border rounded">
+                        <span>Card Holder</span><br>
+                        <span class="text-light name-ui text-uppercase"></span>
+                    </p>
+
+                    <p id="expiry" class="text-info border rounded">
+                        <span>Expires</span><br>
+                        <span class="text-light">
+                            <span class="month">MM</span>/
+                            <span class="year">YY</span> 
+                        </span>
+                    </p>
+
+                    <h4 id="card-cvv" class="text-dark border rounded border-3">
+                        <span class="cvv-ui">***</span>
+                    </h4>
+                </div>
+                
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="card-number" class="form-label text-muted fs-6">Card Number</label>
+                            <input type="text" class="form-control" id="card-number" pattern="[1-9]{1}[0-9]{15}" maxlength="16">
+                            <span class="float-right text-danger error"></span>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="card-holder-name" class="form-label text-muted fs-6">Card Holder's Name</label>
+                            <input type="text" class="form-control" id="card-holder-name">
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="w-75">
+                                <label for="expiry-detail" class="form-label text-muted fs-6">Expiration Date</label>
+                                <div id="expiry-detail" class="d-flex">
+                                    <select id="select-month" class="form-select px-4 py-2">
+                                        <option selected>Month</option>
+                                    </select>
+                                
+                                    <select id="select-year" class="form-select px-4 py-2 mx-2">
+                                        <option selected>Year</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="CVV" class="form-label mx-3 text-muted fs-6">CVV</label>
+                                <input type="password" class="form-control" id="CVV" maxlength="3"> 
+                            </div>
+                        </div>
+                    
+                        <button type="button" class="btn btn-primary btn-block btn-lg" data-bs-toggle="modal" data-bs-target="#Results">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="Results" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                <div class="modal-body py-5">
+                    <h5 class="mb-3">Entered Card Details are: </h5>
+                    <div class="input-group">
+                        <span class="input-group-text w-50">Card-number</span>
+                        <textarea class="form-control no-1"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text w-50">Holder's Name</span>
+                        <textarea class="form-control no-2"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text w-50">Month</span>
+                        <textarea class="form-control no-3"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text w-50">Year</span>
+                        <textarea class="form-control no-4"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text w-50">CVV</span>
+                        <textarea class="form-control no-5"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="function.js"></script>
+  </body>
+</html>
